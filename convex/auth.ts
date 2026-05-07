@@ -47,7 +47,7 @@ export const { auth, signIn, signOut, store, isAuthenticated } = convexAuth({
       verify: emailProvider,
       reset: AppSpacesPasswordReset,
     }),
-    ...(process.env.APP_IS_PREVIEW === "true" ? [TestCredentials] : []),
+    ...(process.env.VIKTOR_SPACES_IS_PREVIEW === "true" ? [TestCredentials] : []),
   ],
 });
 

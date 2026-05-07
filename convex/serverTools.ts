@@ -14,9 +14,9 @@ import { action } from "./_generated/server";
 
 declare const process: { env: Record<string, string | undefined> };
 
-const VIKTOR_API_URL = process.env.APP_API_URL!;
-const PROJECT_NAME = process.env.APP_PROJECT_NAME!;
-const PROJECT_SECRET = process.env.APP_PROJECT_SECRET!;
+const VIKTOR_API_URL = process.env.VIKTOR_SPACES_API_URL!;
+const PROJECT_NAME = process.env.VIKTOR_SPACES_PROJECT_NAME!;
+const PROJECT_SECRET = process.env.VIKTOR_SPACES_PROJECT_SECRET!;
 
 async function callTool<T>(role: string, args: Record<string, unknown> = {}): Promise<T> {
   const response = await fetch(`${VIKTOR_API_URL}/api/viktor-spaces/tools/call`, {

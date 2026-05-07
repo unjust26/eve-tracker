@@ -22,14 +22,14 @@ async function sendEmail({
   heading: string;
   description: string;
 }) {
-  const apiUrl = process.env.APP_API_URL;
-  const projectName = process.env.APP_PROJECT_NAME;
-  const projectSecret = process.env.APP_PROJECT_SECRET;
+  const apiUrl = process.env.VIKTOR_SPACES_API_URL;
+  const projectName = process.env.VIKTOR_SPACES_PROJECT_NAME;
+  const projectSecret = process.env.VIKTOR_SPACES_PROJECT_SECRET;
 
   if (!apiUrl || !projectName || !projectSecret) {
     throw new Error(
       "App environment variables not configured. " +
-        "Required: APP_API_URL, APP_PROJECT_NAME, APP_PROJECT_SECRET",
+        "Required: VIKTOR_SPACES_API_URL, VIKTOR_SPACES_PROJECT_NAME, VIKTOR_SPACES_PROJECT_SECRET",
     );
   }
 
